@@ -100,8 +100,32 @@ def main():
         image_path = input("Enter the image file path: ")
         image = load_image(image_path)
 
+        # Display available image processing techniques
+        print("Available image processing techniques:")
+        print("1. Edge Detection")
+        print("2. Grayscale")
+        print("3. Flip")
+        print("4. Resize")
+        print("5. Object Recognition")
+
         # Get user input for image processing techniques
-        techniques = input("Enter the image processing techniques (separated by commas): ").split(',')
+        techniques = []
+        while True:
+            choice = input("Enter the number of the technique to apply (or 'done' to finish): ")
+            if choice.lower() == 'done':
+                break
+            elif choice == '1':
+                techniques.append('edge_detection')
+            elif choice == '2':
+                techniques.append('grayscale')
+            elif choice == '3':
+                techniques.append('flip')
+            elif choice == '4':
+                techniques.append('resize')
+            elif choice == '5':
+                techniques.append('object_recognition')
+            else:
+                print("Invalid choice. Please try again.")
 
         # Apply image processing techniques in parallel
         with concurrent.futures.ThreadPoolExecutor() as executor:
