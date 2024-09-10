@@ -1,6 +1,6 @@
 Advanced Image Processing and Customization using OpenCV
 
-Matter: Developed an advanced image processing project using OpenCV, featuring edge detection, object recognition, and performance optimization techniques.
+Description: Developed an advanced image processing project using OpenCV, featuring edge detection, object recognition, and performance optimization techniques.
 
 Impact: Allowed users to input their own images and customize the image processing techniques applied, resulting in improved image processing speed and accuracy.
 
